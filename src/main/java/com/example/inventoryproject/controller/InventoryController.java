@@ -21,19 +21,16 @@ import com.example.inventoryproject.exception.ResourceNotFoundException;
 import java.util.List;
 
 
-@CrossOrigin(origins="http://localhost:3000")
+//@CrossOrigin(origins="http://localhost:3000")
 @RestController
 @RequestMapping("/api/")
 public class InventoryController {
     @Autowired
     private InventoryRepository inventoryRepo;
-
-
-
-    //get all students
-
+    
+    //get all inventories
     @GetMapping("/allinventory")
-    public List<InventoryModel> getAllStudents()
+    public List<InventoryModel> getAllInventories()
     {
 
         return inventoryRepo.findAll();
@@ -51,15 +48,13 @@ public class InventoryController {
     @GetMapping("/inventory/{id}")
     public ResponseEntity<InventoryModel> getInventoryById(@PathVariable int id)
     {
-        InventoryModel i= inventoryRepo.findById(id).orElseThrow(() ->  new ResourceNotFoundException("Inventory not found"));
+        InventoryModel i= inventoryRepo.findById(id).orElseThrow(() ->  new ResourceNotFoundException("Inventory not found: " + id));
         return ResponseEntity.ok(i);
     }
 
-    @GetMapping("/inventory/{name}")
+    @GetMapping("/inventory/n/{name}")
     public List<InventoryModel> getInventoryByName(@PathVariable String name)
     {
-        //return studentRepo.findByName(name);
-
         List <InventoryModel> inventories=inventoryRepo.findByName(name);
         if(inventories.isEmpty())
         {

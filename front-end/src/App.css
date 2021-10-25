@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkseagreen;
+  position: relative;
+  height: 100vh;
+}
+
+/* Header */
+
+.navbar {
+  background-color: rgb(110, 144, 144);
+  height: 5vh;
+  color: aliceblue;
+}
+
+.navbar h1 {
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* Footer */
+
+.footer {
+  background-color: rgb(110, 144, 144);
+  height: 4vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add Inventory */
+.container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 91vh;
+}
+
+.card {
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 40vw;
+  height: 58vh;
+  margin: 50px auto;
+}
+
+.card .text-center {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.adding-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.form-group input {
+  width: 60%;
+  height: 3vh;
+  margin: 0 auto;
+  padding-left: 5px;
+  border-radius: 50px;
+}
+
+.form-group input::placeholder {
+  padding-left: 5px;
+  color: black;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin: 15px auto;
+}
+
+.btn {
+  width: 70px;
+  height: 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.btn-success {
+  background-color: cornflowerblue;
+  color: aliceblue;
+}
+
+.btn-danger {
+  background-color: crimson;
+  color: aliceblue;
+}
+
+.btn-primary {
+  background-color: deepskyblue;
+  color: aliceblue;
+}
+
+.btn-view {
+  background-color: rgb(122, 195, 14);
+  color: aliceblue;
+}
+
+.view-button__container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+/* List inventory */
+.text-center {
+  margin-top: 15px;
+}
+
+.add-btn {
+  width: 150px;
+  height: 4vh;
+  margin: 10px 0;
+  background-color: olivedrab;
+  color: aliceblue;
+}
+
+.table,
+th {
+  border: 1px solid black;
+}
+
+.list-items {
+  text-align: center;
+}
+
+.list-body img {
+  width: 100px;
+  height: 100px;
+}
