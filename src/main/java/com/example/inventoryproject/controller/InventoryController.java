@@ -52,7 +52,7 @@ public class InventoryController {
         return ResponseEntity.ok(i);
     }
 
-    @GetMapping("/inventory/n/{name}")
+    @GetMapping("/inventory/n/y{name}")
     public List<InventoryModel> getInventoryByName(@PathVariable String name)
     {
         List <InventoryModel> inventories=inventoryRepo.findByName(name);

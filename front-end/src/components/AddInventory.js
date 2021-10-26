@@ -122,7 +122,7 @@ class AddInventory extends Component {
                     />
                   </div>
                   <div className="form-group">
-                    <label>Student Name: </label>
+                    <label>Inventory Name: </label>
                     <input
                       placeholder="Name"
                       name="name"
